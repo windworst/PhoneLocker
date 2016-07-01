@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-assumenosideeffects class android.util.Log { public static *** e(...); public static *** w(...); public static *** wtf(...); public static *** d(...); public static *** v(...); }
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+-keep public class phonelocker.PhoneLocker {*;}
+-keep public interface phonelocker.PhoneLocker$OnLockCallback {*;}
