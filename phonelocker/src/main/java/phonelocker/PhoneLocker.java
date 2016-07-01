@@ -1,4 +1,4 @@
-package com.android.phonelocker;
+package phonelocker;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;

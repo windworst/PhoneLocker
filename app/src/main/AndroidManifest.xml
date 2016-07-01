@@ -15,23 +15,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".PhoneLocker"
-            android:label="@string/system_access"
-            android:theme="@android:style/Theme.NoDisplay" />
-
-        <receiver
-            android:name=".LockReceiver"
-            android:label="@string/system_access"
-            android:permission="android.permission.BIND_DEVICE_ADMIN">
-            <meta-data
-                android:name="android.app.device_admin"
-                android:resource="@xml/lock_screen" />
-            <intent-filter>
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-            </intent-filter>
-        </receiver>
-
     </application>
 
 </manifest>

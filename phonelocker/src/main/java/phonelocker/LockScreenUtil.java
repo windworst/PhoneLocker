@@ -1,4 +1,4 @@
-package com.android.phonelocker;
+package phonelocker;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
