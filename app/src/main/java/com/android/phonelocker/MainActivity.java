@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.NumberPicker;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import phonelocker.PhoneLocker;
@@ -29,14 +29,21 @@ public class MainActivity extends Activity {
             });
         }
         Button button = (Button) findViewById(R.id.button);
-        final NumberPicker numberPicker = (NumberPicker) findViewById(R.id.numberPicker);
-        numberPicker.setValue(25);
-        numberPicker.setMinValue(1);
-        numberPicker.setMaxValue(10000);
+        final TextView textViewTime = (TextView) findViewById(R.id.editTextTime);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                confirmLock(numberPicker.getValue());
+                long time = 0;
+                try {
+                    time = Long.parseLong(textViewTime.getText().toString());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                if (time <= 0) {
+                    Toast.makeText(MainActivity.this, "请设置合理的时长值", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                confirmLock(time);
             }
         });
     }

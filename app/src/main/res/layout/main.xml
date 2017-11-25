@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,7 +11,7 @@
         android:layout_margin="16dp"
         android:gravity="center"
         android:text="请选择锁定时长"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <GridLayout
         android:id="@+id/gridLayout"
@@ -23,51 +23,66 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="05min"
-            />
+            android:text="05min" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="10min"
-            />
+            android:text="10min" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="15min"
-            />
+            android:text="15min" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="30min"
-            />
+            android:text="30min" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="45min"
-            />
+            android:text="45min" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="60min"
-            />
+            android:text="60min" />
     </GridLayout>
 
-    <NumberPicker
-        android:id="@+id/numberPicker"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="64dp"/>
+        android:layout_marginTop="64dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="自定义"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="自定义时长" />
+
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:text="25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="分" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="确定" />
+    </LinearLayout>
 </LinearLayout>
